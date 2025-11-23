@@ -1,158 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Приглашение на юбилей — Лилия</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <meta name="robots" content="index,follow">
+  <meta charset="UTF-8" />
+  <title>Юбилей Лилии</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    :root{
-      --bg1: #fff0f6;
-      --bg2: #f3f0ff;
-      --accent:#d63384;
-      --muted:#6b6b6b;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    body {
+      background: linear-gradient(to bottom right, #ffe4e6, #ede9fe, #e0f2fe);
+      font-family: sans-serif;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: radial-gradient(1200px 600px at 10% 10%, var(--bg1), transparent 20%), radial-gradient(900px 500px at 90% 90%, var(--bg2), transparent 20%), linear-gradient(180deg,#fff,#fff);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      color:#111;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px;
-    }
-    .wrap{
-      width:100%;
-      max-width:980px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.88));
-      border-radius:18px;
-      box-shadow:0 20px 60px rgba(13,16,25,0.08);
-      overflow:hidden;
-      display:grid;
-      grid-template-columns:1fr 360px;
-    }
-    @media (max-width:900px){ .wrap{grid-template-columns:1fr; padding:18px} }
-    .left{padding:44px 36px}
-    .badge{display:inline-block;background:linear-gradient(90deg, rgba(214,51,132,0.12), rgba(163,71,255,0.12));color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;font-size:13px;margin-bottom:18px;}
-    h1{margin:6px 0 12px 0;font-size:34px;line-height:1.02}
-    p.lead{margin:0 0 22px 0;color:var(--muted);font-size:16px}
-    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-    .meta .item{background:rgba(255,255,255,0.6);padding:10px 12px;border-radius:12px;display:flex;gap:10px;align-items:center;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
-    .rsvp{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{appearance:none;border:0;padding:12px 16px;border-radius:12px;font-weight:600;cursor:pointer;background:linear-gradient(90deg,var(--accent), #7b61ff);color:white;box-shadow:0 8px 24px rgba(117,15,100,0.12)}
-    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(214,51,132,0.12);box-shadow:none}
-    .right{padding:26px;background:linear-gradient(180deg, rgba(250,245,255,0.6), rgba(255,248,250,0.6));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
-    .card-photo{width:100%;max-width:280px;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(145,71,255,0.06)}
-    .card-photo img{display:block;width:100%;height:auto}
-    .details{text-align:center}
-    footer{padding:16px 20px;border-top:1px solid rgba(16,24,40,0.03);display:flex;align-items:center;justify-content:space-between}
-    .small{font-size:13px;color:var(--muted)}
-    .modal-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,8,20,0.45);z-index:60}
-    .modal{background:white;padding:18px;border-radius:12px;max-width:420px;width:92%;box-shadow:0 40px 120px rgba(2,6,23,0.6)}
-    input[type=text], input[type=email]{padding:10px 12px;border-radius:10px;border:1px solid rgba(16,24,40,0.06);width:100%}
   </style>
 </head>
-<body>
-  <div class="wrap" role="main">
-    <section class="left">
-      <span class="badge">Приглашение</span>
-      <h1>Юбилей в честь <span style="color:var(--accent)">Лилии</span></h1>
-      <p class="lead">Будем рады видеть вас на праздновании юбилея — вечере тёплых воспоминаний, музыки и хороших людей. Присоединяйтесь!</p>
+<body class="min-h-screen py-8 px-4">
 
-      <div class="meta" aria-hidden>
-        <div class="item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div>
-            <div style="font-weight:700">Дата и время</div>
-            <div class="small">06 декабря 2025, 17:00</div>
-          </div>
-        </div>
-        <div class="item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div>
-            <div style="font-weight:700">Место</div>
-            <div class="small">Ресторан «Сад Лилий», ул. Центральная, 10</div>
-          </div>
-        </div>
-      </div>
+  <audio id="bg-music" loop>
+    <source src="https://drive.google.com/uc?export=download&id=1fqry7GA0LlFIY3SrRQtEs0ZEsF7e1rnC" type="audio/mpeg" />
+  </audio>
 
-      <div class="rsvp">
-        <button class="btn" id="openRsvp">RSVP — Подтвердить</button>
-        <button class="btn ghost" id="addToCalendar">Добавить в календарь</button>
-        <button class="btn ghost" id="downloadInvite">Скачать</button>
-      </div>
-
-      <footer>
-        <div class="small">Тел.: +7 (900) 123-45-67</div>
-        <div class="small">Ответьте до 01 декабря</div>
-      </footer>
-    </section>
-
-    <aside class="right" aria-label="Фото и детали">
-      <div class="card-photo">
-        <img src="./images/m_photo1.jpg" alt="Лилия" />
-      </div>
-      <div class="details">
-        <h3 style="margin:6px 0 0 0">Лилия Иванова</h3>
-        <p class="small" style="margin:6px 0 0 0">Дорогая подруга и просто чудесный человек.</p>
-      </div>
-    </aside>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal-backdrop" id="modal">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-        <h4 id="modalTitle">Подтвердить участие</h4>
-        <button class="close" id="closeModal" style="background:transparent;border:0;cursor:pointer;font-weight:700">✕</button>
-      </div>
-      <p class="small">Оставьте имя и email — мы пришлём подтверждение.</p>
-      <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
-        <input type="text" id="rname" placeholder="Ваше имя" />
-        <input type="email" id="remail" placeholder="email@example.com" />
-      </div>
-      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:12px">
-        <button class="btn" id="sendRsvp">Отправить</button>
-        <button class="btn ghost" id="cancel">Отмена</button>
-      </div>
+  <div class="fixed bottom-4 right-4 z-50">
+    <button id="musicBtn"
+      class="p-4 rounded-full bg-white/80 backdrop-blur-sm border border-white/40 shadow-lg hover:shadow-xl transition-all">
+      🔇
+    </button>
+    <div id="musicHint" class="absolute bottom-16 right-0 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg text-gray-600 text-sm">
+      Нажмите для музыки 🎵
     </div>
   </div>
 
-  <script>
-    // Простая логика модального окна + календаря + скачивания
-    const modal = document.getElementById('modal');
-    document.getElementById('openRsvp').addEventListener('click', ()=> modal.style.display='flex');
-    document.getElementById('closeModal').addEventListener('click', ()=> modal.style.display='none');
-    document.getElementById('cancel').addEventListener('click', ()=> modal.style.display='none');
+  <div class="max-w-[1200px] mx-auto">
 
-    document.getElementById('sendRsvp').addEventListener('click', ()=>{
-      const name = document.getElementById('rname').value.trim();
-      const email = document.getElementById('remail').value.trim();
-      if(!name || !email){ alert('Пожалуйста, заполните имя и email.'); return; }
-      modal.style.display='none';
-      alert('Спасибо, ' + name + '! Мы получили ваш ответ.');
-    });
+    <!-- ===== HERO ===== -->
+    <section class="mb-8">
+      <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-    document.getElementById('addToCalendar').addEventListener('click', ()=>{
-      const start = '20251206T170000';
-      const end = '20251206T210000';
-      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nUID:${Date.now()}@invite\nDTSTAMP:${start}\nDTSTART:${start}\nDTEND:${end}\nSUMMARY:Юбилей Лилии\nLOCATION:Ресторан Сад Лилий, ул. Центральная, 10\nDESCRIPTION:Празднование юбилея\nEND:VEVENT\nEND:VCALENDAR`;
-      const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a'); a.href = url; a.download = 'jubilee-invite.ics'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-    });
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
+              ✨ <span>Юбилей Лилии</span>
+            </div>
 
-    document.getElementById('downloadInvite').addEventListener('click', ()=>{
-      window.print();
-    });
-  </script>
+            <h1 class="text-3xl font-semibold italic text-pink-600">
+              <i>Дорогие мои друзья, родные и близкие!</i>
+            </h1>
+
+            <p>У меня есть прекрасный повод провести несколько незабываемых часов с самыми близкими и дорогими мне людьми.</p>
+
+            <div class="space-y-3 p-6 bg-white/50 rounded-2xl border shadow-lg">
+              📅 06 декабря 2025 года
+              <br>
+              ⏰ Начало в 17:00 • сбор гостей с 16:00
+            </div>
+
+            <div class="p-6 rounded-2xl bg-pink-50 border shadow-lg">
+              ❤️ Буду очень рада видеть Вас на торжестве!
+            </div>
+          </div>
+
+          <img src="./images/m_photo1.jpg" alt="Лилия" class="rounded-3xl shadow-2xl border-4 border-white">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== СОДЕРЖАНИЕ ===== -->
+    <section class="mb-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8">
+        <div class="bg-white/70 backdrop-blur-sm p-10 rounded-3xl shadow-xl">
+
+          <h2 class="text-2xl font-semibold text-pink-600 mb-6">Приглашение</h2>
+
+          <p>Любимые мои,</p>
+          <p>Этот вечер я хочу разделить с теми, кто дарит мне поддержку, тепло и вдохновение.</p>
+          <p>До скорой встречи! С любовью, Лилия 💕</p>
+
+        </div>
+
+        <img src="./images/m_photo2.jpg" class="rounded-3xl shadow-2xl border-4 border-white" />
+      </div>
+    </section>
+
+
+
+    <!-- ===== ФОРМА RSVP ===== -->
+    <section class="mb-8">
+      <div class="bg-white/70 p-10 rounded-3xl shadow-xl text-center">
+
+        <h2 class="text-2xl mb-4 text-pink-600">Подтверждение присутствия</h2>
+        <p class="text-gray-600 mb-6">Пожалуйста, сообщите о своём решении</p>
+
+        <input id="guestName" type="text" placeholder="Введите ваше ФИО"
+          class="w-full max-w-md mx-auto px-6 py-4 rounded-2xl bg-white/60 border shadow-lg text-center">
+
+        <div class="flex gap-4 justify-center mt-6">
+          <button onclick="submitForm(true)" class="px-8 py-4 rounded-2xl bg-green-500 text-white shadow-lg">Приду</button>
+          <button onclick="submitForm(false)" class="px-8 py-4 rounded-2xl bg-gray-500 text-white shadow-lg">Не приду</button>
+        </div>
+
+        <p id="resultMessage" class="mt-6 text-lg font-semibold hidden"></p>
+
+      </div>
+    </section>
+
+  </div>
+
+<script>
+  const GOOGLE_SCRIPT_URL = "PUT_YOUR_SCRIPT_URL_HERE";
+  const music = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("musicBtn");
+  const hint = document.getElementById("musicHint");
+
+  musicBtn.onclick = () => {
+    if (music.paused) {
+      music.play();
+      musicBtn.innerText = "🔊";
+      hint.style.display = "none";
+    } else {
+      music.pause();
+      musicBtn.innerText = "🔇";
+    }
+  };
+
+  async function submitForm(willAttend) {
+    const name = document.getElementById("guestName").value.trim();
+    const result = document.getElementById("resultMessage");
+
+    if (!name) return alert("Введите ваше ФИО");
+
+    const data = new FormData();
+    data.append("name", name);
+    data.append("willAttend", willAttend ? "Приду" : "Не приду");
+    data.append("timestamp", new Date().toLocaleString("ru-RU"));
+
+    fetch(GOOGLE_SCRIPT_URL, { method: "POST", body: data, mode: "no-cors" });
+
+    result.innerHTML = willAttend
+      ? "💖 Спасибо! Жду вас на празднике!"
+      : "😔 Жаль, что вы не сможете прийти!";
+    result.classList.remove("hidden");
+  }
+</script>
+
 </body>
 </html>
