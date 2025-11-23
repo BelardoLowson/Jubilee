@@ -10,16 +10,18 @@
   <style>
     body {
       background: linear-gradient(to bottom right, #ffe4e6, #ede9fe, #e0f2fe);
-      font-family: sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
   </style>
 </head>
 <body class="min-h-screen py-8 px-4">
 
+  <!-- Audio (музыка) -->
   <audio id="bg-music" loop>
     <source src="https://drive.google.com/uc?export=download&id=1fqry7GA0LlFIY3SrRQtEs0ZEsF7e1rnC" type="audio/mpeg" />
   </audio>
 
+  <!-- Music control -->
   <div class="fixed bottom-4 right-4 z-50">
     <button id="musicBtn"
       class="p-4 rounded-full bg-white/80 backdrop-blur-sm border border-white/40 shadow-lg hover:shadow-xl transition-all">
@@ -39,109 +41,283 @@
 
           <div class="space-y-6">
             <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
-              ✨ <span>Юбилей Лилии</span>
+              ✨ <span class="tracking-wide uppercase">Юбилей Лилии</span>
             </div>
 
-            <h1 class="text-3xl font-semibold italic text-pink-600">
+            <h1 class="text-3xl md:text-4xl font-semibold italic bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               <i>Дорогие мои друзья, родные и близкие!</i>
             </h1>
 
-            <p>У меня есть прекрасный повод провести несколько незабываемых часов с самыми близкими и дорогими мне людьми.</p>
+            <p class="text-lg">
+              У меня есть прекрасный повод провести несколько незабываемых часов в кругу
+              самых близких и дорогих мне людей.
+            </p>
 
-            <div class="space-y-3 p-6 bg-white/50 rounded-2xl border shadow-lg">
-              📅 06 декабря 2025 года
-              <br>
-              ⏰ Начало в 17:00 • сбор гостей с 16:00
+            <div class="space-y-3 p-6 rounded-2xl bg-white/50 border border-white/40 shadow-lg">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 text-white">📅</div>
+                <div><p class="opacity-70">06 декабря 2025 года</p></div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 text-white">⏰</div>
+                <div><p class="opacity-70">Начало в 17:00 • сбор гостей с 16:00</p></div>
+              </div>
             </div>
 
-            <div class="p-6 rounded-2xl bg-pink-50 border shadow-lg">
-              ❤️ Буду очень рада видеть Вас на торжестве!
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 border-2 border-pink-200 shadow-lg">
+              <div class="flex items-start gap-3">
+                <div class="text-pink-500 mt-1">❤️</div>
+                <p class="text-base">Буду очень рада видеть Вас на торжестве по случаю моего юбилейного Дня Рождения!</p>
+              </div>
             </div>
           </div>
 
-          <img src="./images/m_photo1.jpg" alt="Лилия" class="rounded-3xl shadow-2xl border-4 border-white">
+          <img src="YOUR_HERO_IMAGE.png" alt="Лилия юбилей" class="w-full rounded-3xl shadow-2xl border-4 border-white" />
         </div>
       </div>
     </section>
 
-
-    <!-- ===== СОДЕРЖАНИЕ ===== -->
+    <!-- ===== CONTENT ===== -->
     <section class="mb-8">
       <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8">
-        <div class="bg-white/70 backdrop-blur-sm p-10 rounded-3xl shadow-xl">
+        <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-10">
+          <h2 class="mb-6 text-xl md:text-2xl font-semibold italic bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Приглашение</h2>
 
-          <h2 class="text-2xl font-semibold text-pink-600 mb-6">Приглашение</h2>
-
-          <p>Любимые мои,</p>
-          <p>Этот вечер я хочу разделить с теми, кто дарит мне поддержку, тепло и вдохновение.</p>
-          <p>До скорой встречи! С любовью, Лилия 💕</p>
-
+          <div class="space-y-4">
+            <p>Любимые мои,</p>
+            <p>Этот вечер я хочу разделить с теми, кто дарит мне поддержку, тепло и вдохновение.</p>
+            <p>Возьмите с собой хорошее настроение и желание радоваться жизни вместе со мной. Ваше присутствие сделает этот день по-настоящему особенным.</p>
+            <p class="pt-2">До скорой встречи! С любовью, Лилия.</p>
+          </div>
         </div>
 
-        <img src="./images/m_photo2.jpg" class="rounded-3xl shadow-2xl border-4 border-white" />
+        <div class="flex items-center justify-center">
+          <img src="YOUR_SECOND_IMAGE.png" alt="Портрет Лилии" class="w-full max-w-[400px] rounded-3xl shadow-2xl border-4 border-white" />
+        </div>
       </div>
     </section>
 
-
-
-    <!-- ===== ФОРМА RSVP ===== -->
+    <!-- ===== DETAILS / ДЕТАЛИ МЕРОПРИЯТИЯ ===== -->
     <section class="mb-8">
-      <div class="bg-white/70 p-10 rounded-3xl shadow-xl text-center">
+      <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-10">
+        <h2 class="mb-8 text-xl md:text-2xl font-semibold text-center bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Детали мероприятия</h2>
 
-        <h2 class="text-2xl mb-4 text-pink-600">Подтверждение присутствия</h2>
-        <p class="text-gray-600 mb-6">Пожалуйста, сообщите о своём решении</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 border border-pink-100 shadow-lg">
+            <div class="p-3 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 text-white flex-shrink-0">📅</div>
+            <div>
+              <p class="opacity-70 mb-1 text-sm">Дата и время</p>
+              <p class="text-base">06 декабря 2025 г., начало в 17:00 (сбор гостей в 16:00)</p>
+            </div>
+          </div>
 
-        <input id="guestName" type="text" placeholder="Введите ваше ФИО"
-          class="w-full max-w-md mx-auto px-6 py-4 rounded-2xl bg-white/60 border shadow-lg text-center">
+          <div class="flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100 shadow-lg">
+            <div class="p-3 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 text-white flex-shrink-0">✨</div>
+            <div>
+              <p class="opacity-70 mb-1 text-sm">Место</p>
+              <p class="text-base">Банкетный зал «CRYSTALL HAII»</p>
+            </div>
+          </div>
 
-        <div class="flex gap-4 justify-center mt-6">
-          <button onclick="submitForm(true)" class="px-8 py-4 rounded-2xl bg-green-500 text-white shadow-lg">Приду</button>
-          <button onclick="submitForm(false)" class="px-8 py-4 rounded-2xl bg-gray-500 text-white shadow-lg">Не приду</button>
+          <div class="flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 shadow-lg">
+            <div class="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white flex-shrink-0">📍</div>
+            <div>
+              <p class="opacity-70 mb-1 text-sm">Адрес</p>
+              <p class="text-base">г. Якутск, ул. Кулаковского, 4</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 shadow-lg">
+            <div class="p-3 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 text-white flex-shrink-0">📞</div>
+            <div>
+              <p class="opacity-70 mb-1 text-sm">Телефон</p>
+              <p class="text-base">+7 914 280-77-87</p>
+            </div>
+          </div>
         </div>
-
-        <p id="resultMessage" class="mt-6 text-lg font-semibold hidden"></p>
-
       </div>
     </section>
 
+    <!-- ===== RSVP FORM ===== -->
+    <section class="mb-8">
+      <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-10">
+        <h2 class="mb-2 text-xl md:text-2xl font-semibold text-center bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Подтверждение присутствия</h2>
+
+        <p class="text-center text-gray-600 mb-8">Пожалуйста, сообщите о своём решении</p>
+
+        <div class="max-w-md mx-auto space-y-6">
+          <input id="guestName" type="text" placeholder="Введите ваше ФИО"
+            class="w-full px-6 py-4 rounded-2xl bg-white/60 border-2 border-white/40 shadow-lg focus:outline-none focus:border-pink-300 transition-all" style="font-size:15px" />
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button onclick="submitForm(true)" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-xl">
+              ✅ Приду
+            </button>
+
+            <button onclick="submitForm(false)" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-gray-400 to-gray-500 text-white shadow-xl">
+              ❌ Не приду
+            </button>
+          </div>
+
+          <div id="resultBlock" class="hidden max-w-md mx-auto">
+            <div id="resultCard" class="p-8 rounded-2xl shadow-xl text-center"></div>
+            <div class="text-center mt-4">
+              <button id="editBtn" class="px-6 py-2 rounded-full bg-white/60 border border-white/40 shadow-lg">Изменить ответ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DRESS CODE (коротко) ===== -->
+    <section class="mb-8">
+      <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-10">
+        <h2 class="mb-4 text-xl md:text-2xl font-semibold text-center bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Дресс-код</h2>
+
+        <p class="text-center text-gray-700 mb-4">Для меня главное ваше присутствие! Но буду рада, если вы поддержите дресс-код в выбранной цветовой гамме.</p>
+
+        <p class="text-center text-gray-600 mb-8">Предпочтительные оттенки: белый, бежевый, молочный, розовый, пастельные тона.</p>
+      </div>
+    </section>
+    <!-- ===== DRESS CODE COLORS ===== -->
+<section class="mb-8">
+  <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 md:p-10">
+    <h2 class="mb-6 text-xl md:text-2xl font-semibold text-center bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+      Цветовая палитра
+    </h2>
+
+    <p class="text-center text-gray-600 mb-6">
+      Нежные, спокойные оттенки помогут создать единую атмосферу вечера ✨
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+
+      <!-- Цвет 1 -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full border shadow-md" style="background:#FFF7EB;"></div>
+        <p class="text-sm text-gray-600">Молочный</p>
+      </div>
+
+      <!-- Цвет 2 -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full border shadow-md" style="background:#EEDFCC;"></div>
+        <p class="text-sm text-gray-600">Бежевый</p>
+      </div>
+
+      <!-- Цвет 3 -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full border shadow-md" style="background:#F4D8D5;"></div>
+        <p class="text-sm text-gray-600">Пудровый</p>
+      </div>
+
+      <!-- Цвет 4 -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full border shadow-md" style="background:#F7C9D9;"></div>
+        <p class="text-sm text-gray-600">Нежно-розовый</p>
+      </div>
+
+      <!-- Цвет 5 -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full border shadow-md" style="background:#FFE6F9;"></div>
+        <p class="text-sm text-gray-600">Пастельно-розовый</p>
+      </div>
+
+      <!-- Цвет 6 -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full border shadow-md" style="background:#F1E7FF;"></div>
+        <p class="text-sm text-gray-600">Лавандовый</p>
+      </div>
+
+    </div>
+
+    <p class="text-center text-gray-600 mt-8 text-sm">
+      *Чёрный разрешён только как акцент (галстук, ремень, обувь)
+    </p>
+  </div>
+</section>
+  <!-- Footer Note -->
+    <div class="text-center mt-8 py-6">
+      <p class="text-gray-600" style="font-size:14px">Если у Вас изменятся планы, пожалуйста, дайте знать до 29 ноября.</p>
+    </div>
   </div>
 
-<script>
-  const GOOGLE_SCRIPT_URL = "PUT_YOUR_SCRIPT_URL_HERE";
-  const music = document.getElementById("bg-music");
-  const musicBtn = document.getElementById("musicBtn");
-  const hint = document.getElementById("musicHint");
+  <!-- Google Script URL placeholder -->
+  <script>
+    const GOOGLE_SCRIPT_URL = "PUT_YOUR_SCRIPT_URL_HERE";
 
-  musicBtn.onclick = () => {
-    if (music.paused) {
-      music.play();
-      musicBtn.innerText = "🔊";
-      hint.style.display = "none";
-    } else {
-      music.pause();
-      musicBtn.innerText = "🔇";
+    // Музыка
+    const music = document.getElementById("bg-music");
+    const musicBtn = document.getElementById("musicBtn");
+    const hint = document.getElementById("musicHint");
+
+    musicBtn.onclick = () => {
+      if (music.paused) {
+        music.play().catch(() => {
+          // автоплей может быть заблокирован
+        });
+        musicBtn.innerText = "🔊";
+        hint.style.display = "none";
+      } else {
+        music.pause();
+        musicBtn.innerText = "🔇";
+      }
+    };
+
+    // RSVP логика
+    const guestNameInput = document.getElementById("guestName");
+    const resultBlock = document.getElementById("resultBlock");
+    const resultCard = document.getElementById("resultCard");
+    const editBtn = document.getElementById("editBtn");
+
+    async function submitForm(willAttend) {
+      const name = guestNameInput.value.trim();
+      if (!name) {
+        alert("Пожалуйста, укажите ваше ФИО");
+        return;
+      }
+
+      // показать загрузку (опционально)
+      // отправляем данные на Google Script (no-cors)
+      try {
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('willAttend', willAttend ? 'Приду' : 'Не приду');
+        formData.append('timestamp', new Date().toLocaleString('ru-RU'));
+
+        fetch(GOOGLE_SCRIPT_URL, { method: 'POST', body: formData, mode: 'no-cors' });
+      } catch (e) {
+        console.warn('Ошибка отправки (но показываем результат локально):', e);
+      }
+
+      // показать результат
+      resultCard.innerHTML = `
+        <div class="p-6 rounded-2xl ${willAttend ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200' : 'bg-gradient-to-br from-gray-50 to-slate-50 border-2 border-gray-200'}">
+          <div class="mb-4">
+            <div class="flex justify-center">
+              <div class="p-4 rounded-full ${willAttend ? 'bg-green-500 text-white' : 'bg-gray-500 text-white'}" style="font-size:28px">
+                ${willAttend ? '✅' : '❌'}
+              </div>
+            </div>
+          </div>
+          <p class="mb-2 text-lg font-medium">${name}</p>
+          <p class="${willAttend ? 'text-green-700' : 'text-gray-600'}">
+            ${willAttend ? 'Спасибо! Будем рады видеть вас на празднике!' : 'Жаль, что вы не сможете прийти. Будем скучать!'}
+          </p>
+        </div>
+      `;
+      resultBlock.classList.remove("hidden");
+      // скрыть форму (можно очистить)
+      guestNameInput.value = name;
+      // прокрутить к результату (по желанию)
+      resultBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  };
 
-  async function submitForm(willAttend) {
-    const name = document.getElementById("guestName").value.trim();
-    const result = document.getElementById("resultMessage");
-
-    if (!name) return alert("Введите ваше ФИО");
-
-    const data = new FormData();
-    data.append("name", name);
-    data.append("willAttend", willAttend ? "Приду" : "Не приду");
-    data.append("timestamp", new Date().toLocaleString("ru-RU"));
-
-    fetch(GOOGLE_SCRIPT_URL, { method: "POST", body: data, mode: "no-cors" });
-
-    result.innerHTML = willAttend
-      ? "💖 Спасибо! Жду вас на празднике!"
-      : "😔 Жаль, что вы не сможете прийти!";
-    result.classList.remove("hidden");
-  }
-</script>
+    editBtn.onclick = () => {
+      resultBlock.classList.add("hidden");
+      guestNameInput.focus();
+    };
+  </script>
 
 </body>
 </html>
